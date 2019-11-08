@@ -6,18 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
-  <!-- <body onload="start();"> -->
-  <body>
+  <body onload="handleOnload();">
     <h1>Word Guess</h1>
-    <button id="start" onclick="start()">START</button>
 
-    <div id="word"></div>
-    <div id="guess"></div>
+    <!-- div containers -->
+    <div id="word" style="display: none"></div>
+    <div id="guess" style="display: none"></div>
+    <div id="guessCount" style="display: none"></div>
 
-    <form onsubmit="guess();return false">
-      Guess the word: <input id="test" type="text" />
+    <div id="text">Guess the word:</div>
+    <form onsubmit="guessWord();return false">
+      <div id="clue"></div>
+      <input id="input" type="text" />
       <input type="submit" />
     </form>
+
+    Wrong guesses:
+    <div id="wrongCharList"></div>
 
     <script src="index.js"></script>
   </body>
